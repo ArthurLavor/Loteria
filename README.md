@@ -29,4 +29,4 @@ Para executar o sistema localmente, siga os passos abaixo:
    mvn clean install
    mvn tomcat7:run
    ```
-# jogoLoteria2.0
+# jogoLoteria
