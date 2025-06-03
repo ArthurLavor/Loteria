@@ -1,0 +1,27 @@
+[33m84e0452[m ROdando em tomcat 8
+[33mc46d359[m Rodando tomcat 7
+[33m50c4d1d[m Plugins - Baixado plugin de email e feita implementação de envio de Email (Alterar a senha)
+[33m8b627f8[m Plugins - Baixando o plugin vraptor-jpa e incorporando ao projeto
+[33m24ed9f7[m Definindo Ordem nos interceptadores
+[33m3223615[m Refatoração em LogInterceptor para aceitar anotações @log
+[33m218b5f5[m Criado interceptor para Controle de Transações begin e commit
+[33md162acc[m Criado interceptor de Log para exibir o nome do médoto executado
+[33m4676176[m Criando Interceptadores para verificar se o usuario está logado no sistema (se não direciona para login)
+[33m2b4bde5[m Salvando usuario Logado na Sessão
+[33m66ee057[m Feito Controller e view de Login com autenticação
+[33m8b283ba[m Validando campos com Bean diretamente no Model
+[33mca4c3f9[m Validando Campo Quantidade - Com Validação Personalizada
+[33mff35c8f[m Refatoração - Usando sistema de Injeção de Dependência CDI em ProdutoDao
+[33md0a2a9c[m Redirecionando para Lista de Produtos ao Remover um Produto
+[33mc48f2b8[m Retornando a Lista em outros formatos XML e Json usando Result
+[33m752bc64[m Modificando medoto lista para passar a lista pela objeto Result
+[33m79ea423[m Redirecionado para Lista de Produto ao Adicionar um Produto
+[33m25d58dd[m Adicionanto anotação delete
+[33m384f720[m Usando Links gerados pelo proprio Vraptor
+[33m9643e5c[m Criando Links para navegação
+[33m4d44907[m Controller Produto - Removendo Produtos da lista
+[33m7db6be8[m Controller Produto - Adicionando produto através de um formulário
+[33m80ba622[m Feito Controller e View (/produto/sobre)
+[33mdd0b227[m View listagem de produtos com bootstrap
+[33m3f5f683[m Fazendo um Controller com VRaptor
+[33m2c88549[m Projeto Inicial
