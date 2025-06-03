@@ -1,8 +1,7 @@
-	<%@ page language="java" contentType="text/html; charset=UTF-8"
-    	pageEncoding="UTF-8"%>
-    	
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
+ 
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +18,7 @@
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-	
+
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -39,29 +38,35 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Cadastrar!</h1>
               </div>
-              <form class="user">
+              
+              <c:if test="${not empty errors}">
+                <div class="alert alert-danger" role="alert">
+                  <c:forEach var="error" items="${errors}">
+                     ${error.message}<br/>
+                  </c:forEach>
+                </div>
+              </c:if>
+              
+              <form method="post" class="user" action="<c:url value="cadastrar/salvausuario"/>">
                 <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Nome">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Sobrenome">
+                  <div class="col-sm-12 mb-3 mb-sm-0">
+                    <input name="usuario.nome" value="${usuario.nome}"  minlength="3" maxlength="15" type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Nome">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
+                  <input name="usuario.email" value="${usuario.email}" type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Senha">
+                    <input name="usuario.senha" value="${usuario.senha}" minlength="6" maxlength="20" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Senha">
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Confirme a Senha">
+                    <input name="confirmaSenha" value="${confirmaSenha}" type="password" minlength="6" maxlength="20" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Confirme a Senha">
                   </div>
                 </div>
-                <a href="<c:url value="dashboard"/>" class="btn btn-primary btn-user btn-block">
+                <button type="submit" class="btn btn-primary btn-user btn-block">
                   Cadastrar
-                </a>   
+                </button>   
     
               </form>
               <hr>
